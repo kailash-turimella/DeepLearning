@@ -34,11 +34,9 @@ ct = ColumnTransformer(transformers=[('encoder', OneHotEncoder(), [1])], remaind
 X = np.array(ct.fit_transform(X))
 X = X[:,1:]
 
-
 # Splitting the data set into training set and test set
 from sklearn.model_selection import train_test_split 
 X_train,X_test,y_train,y_test = train_test_split(X,y, test_size = 0.20,random_state = 0)
-
 
 # Feature scaling
 #        bringing the age and salary to a specific range
@@ -47,7 +45,6 @@ sc_X = StandardScaler()
 sc_y = StandardScaler()
 X_train = sc_X.fit_transform(X_train)
 X_test = sc_X.transform(X_test)
-
 
 #                                PART-2 - ANN
 #        Importing keras library and packages
