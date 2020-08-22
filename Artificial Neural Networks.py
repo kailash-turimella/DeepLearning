@@ -1,13 +1,5 @@
 # Artificial Neural Network
 
-# Installing Theano
-# pip install --upgrade --no-deps git+git://github.com/Theano/Theano.git
-
-# Installing Tensorflow
-# Install Tensorflow from the website: https://www.tensorflow.org/versions/r0.12/get_started/os_setup.html
-
-# Installing Keras
-# pip install --upgrade keras
 
 #                       PART-1 - Data preprocessing
 
@@ -48,9 +40,6 @@ X_test = sc_X.transform(X_test)
 
 #                                PART-2 - ANN
 #        Importing keras library and packages
-#import warnings
-#warnings.filterwarnings('ignore')
-#import keras
 from keras.models import Sequential
 from keras.layers import Dense
 
@@ -75,13 +64,7 @@ classifier.add(Dense(output_dim=6,
 #      1 - this classification problem has a binary output hence 1
 # You can also use parameter tuning to find the best value for output dim
 
-'''
-Rectifier function:
-   |        
-   |        /
-   |       / 
-   | _____/ ___
-'''
+
 #           Adding the output layer
 classifier.add(Dense(output_dim=1,          # output dim = number of categories, except when 2
                      init='uniform',        # Initialise - random value close to zero but not zero
