@@ -68,7 +68,3 @@ classifier.fit_generator(training_set,               # Fitting it while also tes
                          nb_epoch = 25,              # Number of epochs to train the CNN
                          validation_data = test_set, # On which we want to evaluate the performance of the CNN
                          nb_val_samples = 2000)      # Number of images in out test set
-
-"""
-https://colab.research.google.com/drive/
-"""
